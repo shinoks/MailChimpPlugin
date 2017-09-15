@@ -72,9 +72,9 @@ class NewsletterSubscriptionHandler
     }
 
     /**
-     * @param string $email
+     * @param string|null $email
      */
-    public function subscribe(string $email): void
+    public function subscribe(?string $email): void
     {
         $customer = $this->customerRepository->findOneBy(['email' => $email]);
 
